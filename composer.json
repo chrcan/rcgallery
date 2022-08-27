@@ -17,8 +17,6 @@
 	},
 	"require-dev": {
 		"ergebnis/composer-normalize": "*",
-		"friendsoftypo3/extension-builder": "^11.0",
-		"ssch/typo3-rector": "^1.0",
 		"typo3-console/composer-auto-commands": "*",
 		"typo3-console/composer-typo3-auto-install": "*",
 		"typo3/cms-lowlevel": "*",
