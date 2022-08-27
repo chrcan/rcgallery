@@ -1,0 +1,97 @@
+{
+	"name": "rcdesign/rcgallery",
+	"description": "TYPO3 Gallery",
+	"license": "GPL-3.0-or-later",
+	"type": "typo3-cms-extension",
+	"authors": [
+		{
+			"name": "Christian Racan",
+			"email": "werbegrafik@rc-design.at",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://www.rc-design.at",
+	"require": {
+		"typo3/cms-core": "^11.5",
+		"typo3/cms-fluid-styled-content": "^11.5"
+	},
+	"require-dev": {
+		"ergebnis/composer-normalize": "*",
+		"friendsoftypo3/extension-builder": "^11.0",
+		"ssch/typo3-rector": "^1.0",
+		"typo3-console/composer-auto-commands": "*",
+		"typo3-console/composer-typo3-auto-install": "*",
+		"typo3/cms-lowlevel": "*",
+		"typo3/cms-tstemplate": "*",
+		"typo3/coding-standards": "*"
+	},
+	"config": {
+		"allow-plugins": {
+			"typo3/cms-composer-installers": true,
+			"typo3/class-alias-loader": true,
+			"ergebnis/composer-normalize": true
+		},
+		"sort-packages": true
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "rcgallery"
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"Rcdesign\\Rcgallery\\": "Classes"
+		}
+	},
+	"scripts": {
+		"ci": [
+			"@ci:static",
+			"@ci:dynamic"
+		],
+		"ci:composer": [
+			"@ci:composer:normalize",
+			"@ci:composer:validate"
+		],
+		"ci:composer:normalize": "@composer normalize --ansi -n --dry-run",
+		"ci:composer:validate": "@composer validate --ansi -n --strict",
+		"ci:dynamic": [
+			"# No dynamic tests defined"
+		],
+		"ci:php": [
+			"@ci:php:cs-fixer"
+		],
+		"ci:php:cs-fixer": "@php php-cs-fixer fix -v --dry-run --diff --using-cache no",
+		"ci:static": [
+			"@ci:composer",
+			"@ci:php"
+		],
+		"clean": [
+			"rm -fr config public var vendor .php-cs-fixer.cache composer.lock || true"
+		],
+		"fix": [
+			"@fix:composer",
+			"@fix:php"
+		],
+		"fix:composer": [
+			"@fix:composer:normalize"
+		],
+		"fix:composer:normalize": [
+			"@composer normalize --ansi -n"
+		],
+		"fix:php": [
+			"@fix:php:cs"
+		],
+		"fix:php:cs": "@php php-cs-fixer fix"
+	},
+	"scripts-descriptions": {
+		"ci": "Runs all dynamic and static code checks.",
+		"ci:composer:normalize": "Checks the composer.json.",
+		"ci:dynamic": "Runs all PHPUnit tests (unit and functional).",
+		"ci:php": "Runs all static checks for the PHP files.",
+		"ci:php:cs-fixer": "Checks the code style with the PHP Coding Standards Fixer (PHP-CS-Fixer).",
+		"ci:static": "Runs all static code checks (syntax, style, types).",
+		"clean": "Clean deletes the existing TYPO3 installation and temporary files",
+		"fix:php": "Runs all fixers for the PHP code.",
+		"fix:php:cs": "Fixes the code style with PHP-CS-Fixer."
+	}
+}

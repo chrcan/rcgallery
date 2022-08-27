@@ -1,0 +1,104 @@
+name: Continuous Integration (CI)
+
+on:
+  push:
+    branches:
+      - 'main'
+      - '[0-9]+.*'
+    paths-ignore:
+      - '.ddev/**'
+      - '.vscode/*'
+      - '**.rst'
+  pull_request:
+    paths-ignore:
+      - '.ddev/**'
+      - '.vscode/*'
+      - '**.rst'
+
+env:
+  COMPOSER_FLAGS: --ansi --no-interaction --no-progress
+  COMPOSER_INSTALL_FLAGS: --prefer-dist
+  COMPOSER_UPDATE_FLAGS: ''
+  TYPO3_IS_SET_UP: 1
+
+jobs:
+  validation:
+    name: Composer validation
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          coverage: none
+          extensions: intl, zip
+          ini-values: memory_limit=-1, error_reporting=E_ALL, display_errors=On
+          php-version: latest
+          tools: composer
+
+      - name: Composer Cache Vars
+        id: composer-cache-vars
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+          echo "::set-output name=timestamp::$(date +"%s")"
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache-vars.outputs.dir }}
+          key: ${{ runner.os }}-composer-latest-stable-${{ steps.composer-cache-vars.outputs.timestamp }}
+          restore-keys: |
+            ${{ runner.os }}-composer-latest-stable-
+            ${{ runner.os }}-composer-latest-
+            ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: composer install ${{ env.COMPOSER_INSTALL_FLAGS }} ${{ env.COMPOSER_FLAGS }}
+
+      - name: Validate composer.json
+        run: composer ci:composer:validate
+
+      - name: Normalize composer.json
+        run: composer ci:composer:normalize
+
+  php_coding_standards:
+    name: PHP Coding Standards
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Install PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          coverage: none
+          extensions: intl, zip
+          ini-values: memory_limit=-1, error_reporting=E_ALL, display_errors=On
+          php-version: latest
+          tools: composer
+
+      - name: Composer Cache Vars
+        id: composer-cache-vars
+        run: |
+          echo "::set-output name=dir::$(composer config cache-files-dir)"
+          echo "::set-output name=timestamp::$(date +"%s")"
+
+      - name: Cache Composer dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.composer-cache-vars.outputs.dir }}
+          key: ${{ runner.os }}-composer-latest-stable-${{ steps.composer-cache-vars.outputs.timestamp }}
+          restore-keys: |
+            ${{ runner.os }}-composer-latest-stable-
+            ${{ runner.os }}-composer-latest-
+            ${{ runner.os }}-composer-
+
+      - name: Install dependencies
+        run: composer install ${{ env.COMPOSER_INSTALL_FLAGS }} ${{ env.COMPOSER_FLAGS }}
+
+      - name: Validation of coding standards for PHP files
+        run: composer ci:php:cs-fixer

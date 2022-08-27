@@ -1,0 +1,7 @@
+/config
+/public
+/var
+/vendor
+/.php-cs-fixer.cache
+/.php-cs-fixer.php
+/composer.lock
