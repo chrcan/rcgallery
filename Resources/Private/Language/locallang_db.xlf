@@ -3,6 +3,12 @@
 	<file source-language="en" datatype="plaintext" original="EXT:rcgallery/Resources/Private/Language/locallang_db.xlf" date="2022-08-26T11:37:55Z" product-name="rcgallery">
 		<header/>
 		<body>
+			<trans-unit id="tx_rcgallery.name" resname="tx_rcgallery.name">
+				<source>rc Gallery</source>
+			</trans-unit>
+			<trans-unit id="tx_rcgallery.description" resname="tx_rcgallery.description">
+				<source>List Gallery with Date Time and Images</source>
+			</trans-unit>
 			<trans-unit id="tx_rcgallery_domain_model_gallery" resname="tx_rcgallery_domain_model_gallery">
 				<source>Gallery</source>
 			</trans-unit>

@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the rcdesign/fluid-styled-content-custom-css package.
+ * This file is part of the rcdesign/rcgallery package.
  *
  * Copyright (C) 2022  rc design visual concepts <https://rc-design.at>
  *
@@ -24,6 +24,6 @@
 return [
     'rcgallery-plugin-rcgallery' => [
         'provider' => \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
-        'source' => 'EXT:rcgallery/Resources/Public/Icons/user_plugin_rcgallery.svg',
+        'source' => 'EXT:rcgallery/Resources/Public/Icons/rcIcon.svg',
     ],
 ];

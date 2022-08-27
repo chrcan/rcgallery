@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the rcdesign/fluid-styled-content-custom-css package.
+ * This file is part of the rcdesign/rcgallery package.
  *
  * Copyright (C) 2022  rc design visual concepts <https://rc-design.at>
  *

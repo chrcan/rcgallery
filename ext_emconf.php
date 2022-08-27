@@ -1,7 +1,7 @@
 <?php
 
 /*
- * This file is part of the rcdesign/fluid-styled-content-custom-css package.
+ * This file is part of the rcdesign/rcgallery package.
  *
  * Copyright (C) 2022  rc design visual concepts <https://rc-design.at>
  *
@@ -27,7 +27,7 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'plugin',
     'author' => 'Christian Racan',
     'author_email' => 'werbegrafik@rc-design.at',
-    'state' => 'alpha',
+    'state' => 'stable',
     'clearCacheOnLoad' => 0,
     'version' => '1.0.0',
     'constraints' => [
