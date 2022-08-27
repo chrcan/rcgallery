@@ -25,6 +25,11 @@
 		"typo3/cms-tstemplate": "*",
 		"typo3/coding-standards": "*"
 	},
+	"autoload": {
+		"psr-4": {
+			"Rcdesign\\Rcgallery\\": "Classes"
+		}
+	},
 	"config": {
 		"allow-plugins": {
 			"typo3/cms-composer-installers": true,
@@ -36,11 +41,6 @@
 	"extra": {
 		"typo3/cms": {
 			"extension-key": "rcgallery"
-		}
-	},
-	"autoload": {
-		"psr-4": {
-			"Rcdesign\\Rcgallery\\": "Classes"
 		}
 	},
 	"scripts": {
