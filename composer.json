@@ -1,6 +1,6 @@
 {
 	"name": "rcdesign/rcgallery",
-	"description": "TYPO3 Gallery",
+	"description": "Simple TYPO3 Gallery with a list preview and a creation date",
 	"license": "GPL-3.0-or-later",
 	"type": "typo3-cms-extension",
 	"authors": [
