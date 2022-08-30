@@ -6,7 +6,9 @@
 
     <f:flashMessages />
     <f:render partial="Gallery/Properties" arguments="{gallery:gallery}" />
-    <f:link.action action="list" class="btn btn-secondary">Back to list</f:link.action>
+    <f:link.action action="list" class="btn btn-secondary">
+        <f:translate id="back" />
+    </f:link.action>
     <f:comment>
         <f:link.action action="new">New Gallery</f:link.action>
     </f:comment>

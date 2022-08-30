@@ -35,6 +35,10 @@
 				<source>Caption</source>
 				<target>Bildbeschriftung</target>
 			</trans-unit>
+			<trans-unit id="back" resname="back">
+            	<source>Back to list</source>
+            	<target>Zurück zur Liste</target>
+         	</trans-unit>
 		</body>
 	</file>
 </xliff>

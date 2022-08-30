@@ -27,6 +27,9 @@
 			<trans-unit id="tx_rcgallery_domain_model_image.caption" resname="tx_rcgallery_domain_model_image.caption">
 				<source>Caption</source>
 			</trans-unit>
+			<trans-unit id="back" resname="back">
+            	<source>Back to list</source>
+         	</trans-unit>
 		</body>
 	</file>
 </xliff>
