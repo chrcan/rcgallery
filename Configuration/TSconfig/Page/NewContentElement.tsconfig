@@ -1,0 +1,16 @@
+mod {
+  wizards.newContentElement.wizardItems.plugins {
+      elements {
+          rcgallery {
+              iconIdentifier = rcgallery-plugin-rcgallery
+              title = LLL:EXT:rcgallery/Resources/Private/Language/locallang_db.xlf:tx_rcgallery.name
+              description = LLL:EXT:rcgallery/Resources/Private/Language/locallang_db.xlf:tx_rcgallery.description
+              tt_content_defValues {
+                  CType = list
+                  list_type = rcgallery_rcgallery
+              }
+          }
+      }
+      show = *
+  }
+}

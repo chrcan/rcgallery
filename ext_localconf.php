@@ -38,21 +38,10 @@ defined('TYPO3') || die();
 
     // wizards
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-        'mod {
-            wizards.newContentElement.wizardItems.plugins {
-                elements {
-                    rcgallery {
-                        iconIdentifier = rcgallery-plugin-rcgallery
-                        title = LLL:EXT:rcgallery/Resources/Private/Language/locallang_db.xlf:tx_rcgallery.name
-                        description = LLL:EXT:rcgallery/Resources/Private/Language/locallang_db.xlf:tx_rcgallery.description
-                        tt_content_defValues {
-                            CType = list
-                            list_type = rcgallery_rcgallery
-                        }
-                    }
-                }
-                show = *
-            }
-       }'
+        // TYPO3 v12
+        //'@import "EXT:rcgallery/Configuration/TSconfig/Page/*.tsconfig"'
+
+        // TYPO3 v11 and older
+        '<INCLUDE_TYPOSCRIPT: source="DIR:EXT:rcgallery/Configuration/TSconfig/Page/" extensions="tsconfig">'
     );
 })();
