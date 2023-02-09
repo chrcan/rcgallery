@@ -12,8 +12,8 @@
 	],
 	"homepage": "https://www.rc-design.at",
 	"require": {
-		"typo3/cms-core": "^11.5",
-		"typo3/cms-fluid-styled-content": "^11.5"
+		"typo3/cms-core": "^11.5 || ^12",
+		"typo3/cms-fluid-styled-content": "^11.5 || ^12"
 	},
 	"require-dev": {
 		"ergebnis/composer-normalize": "*",
