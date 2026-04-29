@@ -3,6 +3,7 @@
 	"description": "Simple TYPO3 Gallery with a list preview and a creation date",
 	"license": "GPL-3.0-or-later",
 	"type": "typo3-cms-extension",
+	"version": "2.0.0",
 	"authors": [
 		{
 			"name": "Christian Racan",
@@ -36,7 +37,10 @@
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "rcgallery"
+			"extension-key": "rcgallery",
+			"Package": {
+				"providesPackages": {}
+			}
 		}
 	},
 	"scripts": {

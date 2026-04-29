@@ -42,7 +42,7 @@ final class RcdesignRcgalleryCTypeMigration extends AbstractListTypeToCTypeUpdat
     protected function getListTypeToCTypeMapping(): array
     {
         return [
-            // TODO: Add this mapping yourself!
+            'rcgallery_rcgallery' => 'rcgallery_rcgallery',
         ];
     }
 }
