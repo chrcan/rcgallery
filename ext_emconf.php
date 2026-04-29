@@ -11,7 +11,7 @@ declare(strict_types=1);
 
 $EM_CONF[$_EXTKEY] = [
     'title' => 'rcgallery',
-    'description' => '',
+    'description' => 'This image gallery creates a title that serves as a link for the gallery.',
     'category' => 'plugin',
     'author' => 'Christian Racan',
     'author_email' => 'werbegrafik@rc-design.at',
