@@ -19,7 +19,7 @@ ExtensionUtility::registerPlugin(
     'LLL:EXT:rcgallery/Resources/Private/Language/locallang_db.xlf:tx_rcgallery.name',
     'rcgallery-plugin-rcgallery',
     null,
-    null,
+    '',
     'FILE:EXT:rcgallery/Configuration/FlexForms/rcgallery_rcgallery.xml'
 );
 
