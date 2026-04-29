@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:rcgallery/Resources/Private/Language/locallang_csh_tx_rcgallery_domain_model_gallery.xlf" date="2022-08-26T11:37:55Z" product-name="rcgallery" target-language="de">
+		<header/>
+		<body>
+			<trans-unit id="title.description" resname="title.description">
+				<source>title</source>
+				<target>Titel</target>
+			</trans-unit>
+			<trans-unit id="recordin_day.description" resname="recordin_day.description">
+				<source>recordinDay</source>
+				<target>Aufnahme Datum</target>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>description</source>
+				<target>Beschreibung</target>
+			</trans-unit>
+			<trans-unit id="images.description" resname="images.description">
+				<source>images</source>
+				<target>Bilder</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

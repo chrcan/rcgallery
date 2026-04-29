@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <sheetTitle>LLL:EXT:rcgallery/Resources/Private/Language/locallang_db.xlf:flexform.sheet_general</sheetTitle>
+                <type>array</type>
+                <el>
+                    <settings.storagePid>
+                        <label>LLL:EXT:rcgallery/Resources/Private/Language/locallang_db.xlf:flexform.storagePid</label>
+                        <config>
+                            <type>group</type>
+                            <allowed>pages</allowed>
+                            <size>3</size>
+                            <maxitems>50</maxitems>
+                            <minitems>0</minitems>
+                        </config>
+                    </settings.storagePid>
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

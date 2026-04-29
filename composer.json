@@ -1,0 +1,89 @@
+{
+	"name": "rcdesign/rcgallery",
+	"description": "Simple TYPO3 Gallery with a list preview and a creation date",
+	"license": "GPL-3.0-or-later",
+	"type": "typo3-cms-extension",
+	"authors": [
+		{
+			"name": "Christian Racan",
+			"email": "werbegrafik@rc-design.at",
+			"role": "Developer"
+		}
+	],
+	"homepage": "https://www.rc-design.at",
+	"require": {
+		"php": ">=8.1",
+		"typo3/cms-core": "^14.3",
+		"typo3/cms-fluid-styled-content": "^14.3"
+	},
+	"require-dev": {
+		"ergebnis/composer-normalize": "^2.0",
+		"friendsofphp/php-cs-fixer": "^3.0",
+		"typo3/coding-standards": "*"
+	},
+	"autoload": {
+		"psr-4": {
+			"Rcdesign\\Rcgallery\\": "Classes"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"ergebnis/composer-normalize": true,
+			"typo3/class-alias-loader": true,
+			"typo3/cms-composer-installers": true
+		},
+		"sort-packages": true
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "rcgallery"
+		}
+	},
+	"scripts": {
+		"ci": [
+			"@ci:static",
+			"@ci:dynamic"
+		],
+		"ci:composer": [
+			"@ci:composer:normalize",
+			"@ci:composer:validate"
+		],
+		"ci:composer:normalize": "@composer normalize --ansi -n --dry-run",
+		"ci:composer:validate": "@composer validate --ansi -n --strict",
+		"ci:dynamic": [
+			"# No dynamic tests defined"
+		],
+		"ci:php": [
+			"@ci:php:cs-fixer"
+		],
+		"ci:php:cs-fixer": "@php vendor/bin/php-cs-fixer fix -v --dry-run --diff --using-cache no",
+		"ci:static": [
+			"@ci:composer",
+			"@ci:php"
+		],
+		"fix": [
+			"@fix:composer",
+			"@fix:php"
+		],
+		"fix:composer": [
+			"@fix:composer:normalize"
+		],
+		"fix:composer:normalize": [
+			"@composer normalize --ansi -n"
+		],
+		"fix:php": [
+			"@fix:php:cs"
+		],
+		"fix:php:cs": "@php vendor/bin/php-cs-fixer fix"
+	},
+	"scripts-descriptions": {
+		"ci": "Runs all dynamic and static code checks.",
+		"ci:composer:normalize": "Checks the composer.json.",
+		"ci:dynamic": "Runs all PHPUnit tests (unit and functional).",
+		"ci:php": "Runs all static checks for the PHP files.",
+		"ci:php:cs-fixer": "Checks the code style with the PHP Coding Standards Fixer (PHP-CS-Fixer).",
+		"ci:static": "Runs all static code checks (syntax, style, types).",
+		"fix:php": "Runs all fixers for the PHP code.",
+		"fix:php:cs": "Fixes the code style with PHP-CS-Fixer."
+	}
+}

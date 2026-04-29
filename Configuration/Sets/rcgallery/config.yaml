@@ -1,0 +1,4 @@
+name: rcdesign/rcgallery
+label: rcgallery
+dependencies:
+  - typo3/fluid-styled-content

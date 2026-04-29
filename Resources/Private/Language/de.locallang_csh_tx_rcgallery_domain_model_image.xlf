@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:rcgallery/Resources/Private/Language/locallang_csh_tx_rcgallery_domain_model_image.xlf" date="2022-08-26T11:37:55Z" product-name="rcgallery" target-language="de">
+		<header/>
+		<body>
+			<trans-unit id="file.description" resname="file.description">
+				<source>file</source>
+				<target>Datei</target>
+			</trans-unit>
+			<trans-unit id="caption.description" resname="caption.description">
+				<source>caption</source>
+				<target>Bildbeschreibung</target>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<h2>{gallery.title}</h2>
+<h3>{gallery.recordinDay ->f:format.date(format: "d.m.Y")}</h3>
+<p>{gallery.description}</p>
+
+<table class="tx-rcgallery">
+    <tr>
+        <f:for each="{gallery.images}" as="image">
+            <td>
+                <a href="{image.file.originalResource.publicUrl}" title="{image.title}" class="fancybox"
+                    data-fancybox="fancybox" rel="gallery3" tabindex="0">
+                    <f:image image="{image.file}" alt="{image.title}" width="300m" height="300m" />
+                </a>
+            </td>
+        </f:for>
+    </tr>
+</table>
+
+<f:comment>
+    <table class="tx-rcgallery">
+        <tr>
+            <td>
+                <f:translate key="tx_rcgallery_domain_model_gallery.title" />
+            </td>
+            <td>{gallery.title}</td>
+        </tr>
+        <tr>
+            <td>
+                <f:translate key="tx_rcgallery_domain_model_gallery.recordin_day" />
+            </td>
+            <td>{gallery.recordinDay -> f:format.date()}</td>
+        </tr>
+        <tr>
+            <td>
+                <f:translate key="tx_rcgallery_domain_model_gallery.description" />
+            </td>
+            <td>{gallery.description}</td>
+        </tr>
+    </table>
+</f:comment>
+
+</html>
