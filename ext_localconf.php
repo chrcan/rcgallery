@@ -24,7 +24,8 @@ defined('TYPO3') || die();
         // non-cacheable actions
         [
             GalleryController::class => '',
-        ]
+        ],
+        ExtensionUtility::PLUGIN_TYPE_CONTENT_ELEMENT
     );
 
 })();

@@ -9,7 +9,6 @@ declare(strict_types=1);
  * _________________________________________________
  */
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 use TYPO3\CMS\Extbase\Utility\ExtensionUtility;
 
 defined('TYPO3') || die();
@@ -19,12 +18,9 @@ ExtensionUtility::registerPlugin(
     'Rcgallery',
     'LLL:EXT:rcgallery/Resources/Private/Language/locallang_db.xlf:tx_rcgallery.name',
     'rcgallery-plugin-rcgallery',
-);
-
-ExtensionManagementUtility::addPiFlexFormValue(
-    '*',
-    'FILE:EXT:rcgallery/Configuration/FlexForms/rcgallery_rcgallery.xml',
-    'rcgallery_rcgallery'
+    null,
+    null,
+    'FILE:EXT:rcgallery/Configuration/FlexForms/rcgallery_rcgallery.xml'
 );
 
 $GLOBALS['TCA']['tt_content']['types']['rcgallery_rcgallery']['showitem'] = '

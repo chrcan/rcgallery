@@ -11,8 +11,8 @@ declare(strict_types=1);
 
 namespace Rcdesign\Rcgallery\Updates;
 
-use TYPO3\CMS\Install\Attribute\UpgradeWizard;
-use TYPO3\CMS\Install\Updates\AbstractListTypeToCTypeUpdate;
+use TYPO3\CMS\Core\Attribute\UpgradeWizard;
+use TYPO3\CMS\Core\Upgrades\AbstractListTypeToCTypeUpdate;
 
 #[UpgradeWizard('rcdesignRcgalleryCTypeMigration')]
 final class RcdesignRcgalleryCTypeMigration extends AbstractListTypeToCTypeUpdate
